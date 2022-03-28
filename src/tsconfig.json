@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "outDir": "../H5P.ActionEngine/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "resolveJsonModule": true,
+    "module": "es6",
+    "target": "es2019",
+    "jsx": "react",
+    "allowJs": false,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "Node"
+  }
+}
