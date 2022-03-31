@@ -1,73 +1,81 @@
 import { IPreReq } from "../models";
+import { InteractionType } from "./activity";
+import { IAgent } from "./agent";
+import { IAttachment, IStatementRef } from "./statement";
 export interface IAgentReqObject {
-    objectType?: IPreReq;
-    mbox?: IPreReq;
-    mbox_sha1sum?: IPreReq;
-    openid?: IPreReq;
-    account?: IPreReq | {
-        name?: IPreReq;
-        homePage?: IPreReq;
+    objectType?: IPreReq<string>;
+    mbox?: IPreReq<string>;
+    mbox_sha1sum?: IPreReq<string>;
+    openid?: IPreReq<string>;
+    account?: {
+        name?: IPreReq<string>;
+        homePage?: IPreReq<string>;
     }
 }
 
 export interface IActivityReqObject {
-    objectType?: IPreReq;
-    id?: IPreReq;
-    definition: IPreReq | {
-        name?: {[key: string]: IPreReq};
-        description: {[key: string]: IPreReq};
-        type?: IPreReq;
-        moreInfo?: IPreReq;
-        extensions?:{[key: string]: IPreReq};
+    objectType?: IPreReq<string>;
+    id?: IPreReq<string>;
+    definition: {
+        name?: {[key: string]: IPreReq<string>};
+        description: {[key: string]: IPreReq<string>};
+        type?: IPreReq<string>;
+        moreInfo?: IPreReq<string>;
+        extensions?:{[key: string]: IPreReq<any>};
     }
-    interactionType?: IPreReq;
-    correctResponsePattern?: IPreReq;
-    choices?: IPreReq;
-    scale?: IPreReq;
-    source?: IPreReq;
-    target?: IPreReq;
-    steps?: IPreReq;
+    interactionType?: IPreReq<InteractionType>;
+    correctResponsePattern?: IPreReq<string[]>;
+    choices?: IPreReq<string[]>;
+    scale?: IPreReq<string[]>;
+    source?: IPreReq<string[]>;
+    target?: IPreReq<string[]>;
+    steps?: IPreReq<string[]>;
 }
 
 export interface IGroupReqObject extends IAgentReqObject {
-    name?: IPreReq;
-    members?: IPreReq;
+    name?: IPreReq<string>;
+    members?: IPreReq<IAgent[]>;
+}
+
+export interface IStatementRefReqObj {
+    objectType: IPreReq<string>;
+    id: IPreReq<string>;
 }
 
 export default interface IStatementReqObject {
-    id?: IPreReq;
-    timestamp?: IPreReq;
-    stored?: IPreReq;
-    actor?: IPreReq| IAgentReqObject | IActivityReqObject;
-    verb?: IPreReq | {
-        id: IPreReq;
-        display: {[key: string]: IPreReq};
+    id?: IPreReq<string>;
+    timestamp?: IPreReq<string>;
+    stored?: IPreReq<string>;
+    actor?: IAgentReqObject | IActivityReqObject;
+    verb?: {
+        id: IPreReq<string>;
+        display: {[key: string]: IPreReq<string>};
     };
-    object?: IPreReq | IAgentReqObject | IActivityReqObject;
-    result?: IPreReq | {
+    object?: IAgentReqObject | IActivityReqObject;
+    result?: {
         score?: {
-            rawScore?: IPreReq;
-            scaledScore?: IPreReq;
-            minimumScore?: IPreReq;
-            maximumScore?: IPreReq;
+            rawScore?: IPreReq<number>;
+            scaledScore?: IPreReq<number>;
+            minimumScore?: IPreReq<number>;
+            maximumScore?: IPreReq<number>;
         };
-        success?: IPreReq;
-        completion?: IPreReq;
-        response?: IPreReq;
-        duration?: IPreReq;
-        extensions?: {[key: string]: IPreReq};
+        success?: IPreReq<boolean>;
+        completion?: IPreReq<boolean>;
+        response?: IPreReq<string>;
+        duration?: IPreReq<string>;
+        extensions?: {[key: string]: IPreReq<any>};
 
     };
     context?: {
-        registration?: IPreReq;
-        instructor?: IPreReq;
-        instructorName: IPreReq;
-        team?: IPreReq;
-        contextActivities: IPreReq;
-        language?: IPreReq;
-        statement?: IPreReq;
-        extensions: {[key: string]: IPreReq};
+        registration?: IPreReq<string>;
+        instructor?: IPreReq<IAgent>;
+        instructorName: IPreReq<string>;
+        team?: IPreReq<IAgent>;
+        contextActivities: IPreReq<{[key: string]: string}>;
+        language?: IPreReq<string>;
+        statement?: IPreReq<IStatementRef>;
+        extensions: {[key: string]: IPreReq<any>};
     }
-    authority: IPreReq;
-    attachments: IPreReq;
+    authority: IAgentReqObject;
+    attachments: IPreReq<IAttachment[]>;
 }

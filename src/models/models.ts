@@ -1,4 +1,4 @@
-import IStatement from './xAPI/statement';
+import { IAgent } from './xAPI/agent';
 import IStatementReqObject from './xAPI/statementReqObject';
 
 export interface IPermissionsObject {
@@ -16,18 +16,26 @@ export enum IReqOperators {
     RANGE = "RANGE" 
 }
 
-export type IPreReq =  {
+export interface IPreReq<Type> {
     operator: IReqOperators;
-    value: any;
+    value: Type;
 };
+
+export interface IRangePreReq<Type> extends IPreReq<Type> {
+    range: {
+        min: Type;
+        max: Type;
+    }
+}
 
 export interface PreRequisitesObject {
     name: string;
-    reqs: {[key: string]: IStatementReqObject}
+    reqs: IStatementReqObject[];
 }
 
 export interface IActionObject {
     name: string;
+    agent: IAgent;
     permissions: IPermissionsObject;
     prereqs: PreRequisitesObject;
 }
@@ -35,6 +43,6 @@ export interface IActionObject {
 export interface WorkflowObject {
     name: string;
     actions: Array<IActionObject>;
-    permissions: IPermissionsObject;
-    prereqs: PreRequisitesObject;
+    permissions: {[key: string]:  IPermissionsObject};
+    prereqs:{[key: string]: PreRequisitesObject};
 }

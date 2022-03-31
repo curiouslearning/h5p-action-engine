@@ -1,7 +1,7 @@
 import { IActionObject } from '../models/models'
 import IStatement from '../models/xAPI/statement';
 import Permissions from '../helpers/permissions';
-import PreRequisites from '../helpers/prerequisites';
+import Evaluator from '../helpers/evaluator';
 
 export type CloseCallback = () => void;
 
@@ -11,23 +11,21 @@ export interface ICloseObject extends IActionObject {
 export default class Close {
     name: string;
     permissions: Permissions;
-    prereqs: PreRequisites;
+    prereqs: Evaluator;
     callback: CloseCallback;
 
     constructor(data: ICloseObject) {
         this.name = data.name;
         this.permissions = new Permissions(data.permissions);
-        this.prereqs = new PreRequisites(data.prereqs);
+        this.prereqs = new Evaluator(data.agent, data.prereqs);
     }
 
     /**
      * close
      */
-    public close(agent: string): void {
-        const reqVals = this.aggregatePreReqs(this.prereqs.getReqIds()
-        );
-        const canClose = this.permissions.hasPermission(agent) &&
-            this.prereqs.satisfiesPreReqs(reqVals);
+    public async close(agent: string): Promise<void> {
+        const canClose = await this.permissions.hasPermission(agent) &&
+            this.prereqs.eval();
         if (canClose) {
             this.executeClose();
         }
@@ -38,9 +36,4 @@ export default class Close {
             this.callback();
         }
     }
-
-    private aggregatePreReqs(ids: string[]): {[key: string]: any} {
-
-    }
-
 }
