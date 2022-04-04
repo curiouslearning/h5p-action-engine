@@ -17,7 +17,7 @@ export enum IReqOperators {
 }
 
 export interface IPreReq<Type> {
-    operator: IReqOperators;
+    operator: IReqOperators | string;
     value: Type;
 };
 
@@ -36,8 +36,10 @@ export interface PreRequisitesObject {
 export interface IActionObject {
     name: string;
     agent: IAgent;
+    org: string;
     permissions: IPermissionsObject;
     prereqs: PreRequisitesObject;
+    action: () => void;
 }
 
 export interface WorkflowObject {

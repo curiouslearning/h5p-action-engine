@@ -3,6 +3,7 @@ import { InteractionType } from "./activity";
 import { IAgent } from "./agent";
 import { IAttachment, IStatementRef } from "./statement";
 export interface IAgentReqObject {
+    name?: IPreReq<string>;
     objectType?: IPreReq<string>;
     mbox?: IPreReq<string>;
     mbox_sha1sum?: IPreReq<string>;
@@ -33,12 +34,11 @@ export interface IActivityReqObject {
 }
 
 export interface IGroupReqObject extends IAgentReqObject {
-    name?: IPreReq<string>;
     members?: IPreReq<IAgent[]>;
 }
 
 export interface IStatementRefReqObj {
-    objectType: IPreReq<string>;
+    objectType?: IPreReq<string>;
     id: IPreReq<string>;
 }
 
@@ -49,15 +49,15 @@ export default interface IStatementReqObject {
     actor?: IAgentReqObject | IActivityReqObject;
     verb?: {
         id: IPreReq<string>;
-        display: {[key: string]: IPreReq<string>};
+        display?: {[key: string]: IPreReq<string>};
     };
     object?: IAgentReqObject | IActivityReqObject;
     result?: {
         score?: {
-            rawScore?: IPreReq<number>;
-            scaledScore?: IPreReq<number>;
-            minimumScore?: IPreReq<number>;
-            maximumScore?: IPreReq<number>;
+            raw?: IPreReq<number>;
+            scaled?: IPreReq<number>;
+            min?: IPreReq<number>;
+            max?: IPreReq<number>;
         };
         success?: IPreReq<boolean>;
         completion?: IPreReq<boolean>;
@@ -69,13 +69,13 @@ export default interface IStatementReqObject {
     context?: {
         registration?: IPreReq<string>;
         instructor?: IPreReq<IAgent>;
-        instructorName: IPreReq<string>;
+        instructorName?: IPreReq<string>;
         team?: IPreReq<IAgent>;
-        contextActivities: IPreReq<{[key: string]: string}>;
+        contextActivities?: IPreReq<{[key: string]: string}>;
         language?: IPreReq<string>;
         statement?: IPreReq<IStatementRef>;
         extensions: {[key: string]: IPreReq<any>};
     }
-    authority: IAgentReqObject;
-    attachments: IPreReq<IAttachment[]>;
+    authority?: IAgentReqObject;
+    attachments?: IPreReq<IAttachment[]>;
 }

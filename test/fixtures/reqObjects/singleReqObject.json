@@ -1,0 +1,43 @@
+{"values": [{
+    "actor": {
+        "account": {
+            "name": {
+                "value": "testAgent",
+                "operator": "EQ" 
+            },
+            "homePage": {
+                "value": "curiouslearning",
+                "operator": "EQ"
+            }
+
+        }
+    },
+    "verb": {
+        "id": {
+            "value": "http://adlnet.gov/expapi/verbs/completed",
+            "operator": "EQ"
+        }
+    },
+    "object": {
+        "id": {
+            "value": "http://data.curiouslearning.org/xAPI/assessment/zulu/oral-vocab",
+            "operator": "EQ"
+        }
+    },
+    "result": {
+        "score": {
+            "scaled": {
+                "value": 80,
+                "operator": "GTE"
+            }
+        },
+        "completion": {
+            "value": true,
+            "operator": "EQ"
+        },
+        "success": {
+            "value": true,
+            "operator": "EQ"
+        }
+    }
+}]}

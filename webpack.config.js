@@ -35,7 +35,7 @@ module.exports = {
     },
     output: {
         filename: 'main.js',
-        path: path.resolve(__dirname, './H5P.ActionEngine'),
+        path: path.resolve(__dirname, './dist'),
     },
     plugins: []
 }

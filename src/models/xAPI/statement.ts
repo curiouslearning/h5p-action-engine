@@ -8,10 +8,10 @@ export interface IVerb {
 
 export interface IResult {
     score?: {
-        scaledScore?: number;
-        rawScore?: number;
-        minimumScore?: number;
-        maximumScore?: number;
+        scaled?: number;
+        raw?: number;
+        min?: number;
+        max?: number;
     }
     success?: boolean;
     completion?: boolean;
@@ -60,9 +60,9 @@ export default interface IStatement {
     object: IAgent | IGroup | IActivity | IStatement |IStatementRef;
     result?: IResult;
     context?: IContext;
-    authority: IAgent | IGroup;
-    attachments: IAttachment[];
-    timestamp: string;
+    authority?: IAgent | IGroup;
+    attachments?: IAttachment[];
+    timestamp?: string;
     stored?: string;
     id?: string;
 }

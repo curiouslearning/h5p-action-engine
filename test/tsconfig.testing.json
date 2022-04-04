@@ -1,6 +1,6 @@
 {
   "extends": "@tsconfig/recommended/tsconfig.json",
-  "module": "ESNext",
+  "module": "CommonJS",
   "compilerOptions": {
     "sourceMap": true,
     "outDir": "dist",
@@ -8,7 +8,6 @@
     "lib": [
       "dom",
       "dom.iterable",
-      "esnext"
     ],
     "allowJs": true,
     "noEmit": true,
@@ -23,7 +22,6 @@
     "**/*.tsx"
   ],
   "exclude": [
-    "../test",
     "../node_modules"
   ],
    "watchOptions": {
