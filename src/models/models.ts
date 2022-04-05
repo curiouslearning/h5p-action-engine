@@ -37,7 +37,7 @@ export interface IActionObject {
     name: string;
     agent: IAgent;
     org: string;
-    permissions: IPermissionsObject;
+    orgList: IPermissionsObject;
     prereqs: PreRequisitesObject;
     action: () => void;
 }
