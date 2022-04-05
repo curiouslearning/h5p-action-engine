@@ -1,0 +1,118 @@
+{"values": [{
+    "actor": {
+        "account": {
+            "name": {
+                "value": "testAgent",
+                "operator": "EQ" 
+            },
+            "homePage": {
+                "value": "curiouslearning",
+                "operator": "EQ"
+            }
+        }
+    },
+    "verb": {
+        "id": {
+            "value": "http://adlnet.gov/expapi/verbs/completed",
+            "operator": "EQ"
+        }
+    },
+    "object": {
+        "id": {
+            "value": "http://data.curiouslearning.org/xAPI/assessment/zulu/oral-vocab",
+            "operator": "EQ"
+        }
+    },
+    "result": {
+        "completion": {
+            "value": true,
+            "operator": "EQ"
+        }
+    }
+}, {
+    "actor": {
+        "account": {
+            "name": {
+                "value": "testAgent",
+                "operator": "EQ" 
+            },
+            "homePage": {
+                "value": "curiouslearning",
+                "operator": "EQ"
+            }
+        }
+    },
+    "verb": {
+        "id": {
+            "value": "http://adlnet.gov/expapi/verbs/completed",
+            "operator": "EQ"
+        }
+    },
+    "object": {
+        "id": {
+            "value": "http://data.curiouslearning.org/xAPI/assessment/zulu/letter-sound",
+            "operator": "EQ"
+        }
+    },
+    "result": {
+        "score": {
+            "scaled": {
+                "operator": "GTE",
+                "value": 80
+            }
+        },
+        "completion": {
+            "value": true,
+            "operator": "EQ"
+        },
+        "success": {
+            "value": true,
+            "operator": "EQ"
+        }
+    }
+},
+{
+    "actor": {
+        "account": {
+            "name": {
+                "value": "testAgent",
+                "operator": "EQ" 
+            },
+            "homePage": {
+                "value": "curiouslearning",
+                "operator": "EQ"
+            }
+        }
+    },
+    "verb": {
+        "id": {
+            "value": "http://adlnet.gov/expapi/verbs/completed",
+            "operator": "EQ"
+        }
+    },
+    "object": {
+        "id": {
+            "value": "http://data.curiouslearning.org/xAPI/assessment/zulu/reading-vocab",
+            "operator": "EQ"
+        }
+    },
+    "result": {
+        "score": {
+            "scaled": {
+                "operator": "RANGE",
+                "range": {
+                    "min": 75,
+                    "max": 100
+                } 
+            }
+        },
+        "completion": {
+            "value": true,
+            "operator": "EQ"
+        },
+        "success": {
+            "value": true,
+            "operator": "EQ"
+        }
+    }
+}]}
