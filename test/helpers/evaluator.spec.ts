@@ -224,5 +224,13 @@ describe("/helpers/evaluator.ts", () => {
 
     });
 
+    it('throws an exception on improperly formatted reqObjects', async () => {
+        throw new Error("Test is not implemented");
+    });
+
+    it('raises a warning on improperly formatted statements and continues',
+        async () => {
+            throw new Error("Test is not implemented");
+    });
 
 });
