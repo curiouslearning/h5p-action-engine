@@ -1,7 +1,15 @@
 import Evaluator from "../helpers/evaluator";
 import { IActionObject, IPermissionsObject, PreRequisitesObject } from "../models/models";
-import { IAgent } from "../models/xAPI/agent";
+import { IAgent, isIAgent } from "../models/xAPI/agent";
 import IStatement from "../models/xAPI/statement";
+
+function isIActionObject(val: any): val is IActionObject {
+    if (!val.org || typeof val.org !== 'string') return false;
+    if (!val.agent || !isIAgent(val.agent)) return false;
+    if(!val.orgList || !val.orgList.name || !val.orgList.permissions) return false;
+    if(!val.prereqs || !val.prereqs.name || !val.prereqs.reqs || Array.isArray(val.prereqs.reqs)) return false;
+    return true;
+}
 
 export default class Action {
     action: () => void;
@@ -19,6 +27,9 @@ export default class Action {
         statements: IStatement[] = [],
         fetchData = false
     ) {
+        if(!isIActionObject(data)) {
+            throw new Error("param 'data' must implement the IActionObject interface")
+        }
         this.action = data.action;
         this.org = data.org;
         this.agent = data.agent;

@@ -88,4 +88,17 @@ describe('/actions/action.ts', () => {
         const test = await action.execute();
         chai.expect(test).to.be.false;
     });
+
+    it('will throw an error on improperly formatted data', async () => {
+        const badParams = {
+            org: NaN,
+            ...params
+        };
+        try {
+           const action = new Action(badParams); 
+           throw new Error("constructor did not throw!");
+        } catch (e) {
+           chai.expect(e.message).to.equal("param 'data' must implement the IActionObject interface") 
+        }
+    });
 })
