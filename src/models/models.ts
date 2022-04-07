@@ -39,7 +39,6 @@ export interface IActionObject {
     org: string;
     orgList: IPermissionsObject;
     prereqs: PreRequisitesObject;
-    action: () => void;
 }
 
 export interface WorkflowObject {

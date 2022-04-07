@@ -1,0 +1,188 @@
+{
+    "recData": {
+        "name": "2-case test",
+        "agent": {
+            "account": {
+                "name": "testAgent",
+                "homePage": "curiousLearning"
+            }
+        },
+        "org": "testOrg1",
+        "orgList": {
+            "name": "2-case permissions", 
+            "permissions": ["testOrg1", "curiousLearning"]
+        },
+        "prereqs": {
+            "name": "basePreReqs",
+            "reqs": []
+        },
+        "recData": [
+            {
+                "name": "firstCase",
+                "index": 1,
+                "preReqs": {
+                    "name": "firstCase",
+                    "reqs": [
+                        {
+                            "verb": {
+                                "id": {
+                                    "value": "http://adlnet.gov/expapi/verbs/completed",
+                                    "operator": "EQ"
+                                }
+                            },
+                            "object": {
+                                "id": {
+                                    "value": "http://data.curiouslearning.org/xAPI/activities/assessment/zulu/oralvocab",
+                                    "operator": "EQ"
+                                }
+                            },
+                            "result": {
+                                "score": {
+                                    "scaled": {
+                                        "value": 50,
+                                        "operator": "GTE"
+                                    }
+                                },
+                                "completion": {
+                                    "value": true,
+                                    "operator": "EQ"
+                                },
+                                "success": {
+                                    "value": true,
+                                    "operator": "EQ"
+                                }
+
+                            }
+                        }
+                    ]
+                },
+                "value": "https://curiousreader.org/en/assessment/letter-sound-english"
+            },
+            {
+                "name": "secondCase",
+                "index": 2,
+                "preReqs": {
+                    "name": "firstCase",
+                    "reqs": [
+                        {
+                            "verb": {
+                                "id": {
+                                    "value": "http://adlnet.gov/expapi/verbs/completed",
+                                    "operator": "EQ"
+                                }
+                            },
+                            "object": {
+                                "id": {
+                                    "value": "http://data.curiouslearning.org/xAPI/activities/assessment/zulu/readingvocab",
+                                    "operator": "EQ"
+                                }
+                            },
+                            "result": {
+                                "score": {
+                                    "scaled": {
+                                        "value": 100,
+                                        "operator": "GTE"
+                                    }
+                                },
+                                "completion": {
+                                    "value": true,
+                                    "operator": "EQ"
+                                },
+                                "success": {
+                                    "value": true,
+                                    "operator": "EQ"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "value": "https://curiousreader.org/en/assessment/sight-words-english"
+            }
+        ],
+        "baseCase": {
+            "name": "baseCase",
+            "index": 0,
+            "preReqs": {
+                "name": "baseCase",
+                "reqs": []
+            },
+            "value": "https://curiousreader.org/"
+        }
+    },
+    "statements": [
+        {
+            "actor": {
+                "account": {
+                    "name": "testAgent",
+                    "homePage": "curiousLearning"
+                },
+                "objectType": "Agent"
+            },
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/completed",
+                "display": {
+                    "en-US": "completed"
+                }
+            },
+            "object": {
+                "id": "http://data.curiouslearning.org/xAPI/activities/assessment/zulu/oralvocab",
+                "definition": {
+                    "name": {
+                        "en-US": "Zulu Oral  Vocabulary"
+                    },
+                    "description": {
+                        "en-US": "Zulu Oral Vocab assessment"
+                    },
+                    "type": "http://data.curiouslearning.org/xAPI/activities/assessment"
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "score": {
+                    "scaled": 65,
+                    "max": 100
+                },
+                "success": true,
+                "completion": true,
+                "duration": "PT10M"
+            }
+        },
+        {
+            "actor": {
+                "account": {
+                    "name": "testAgent",
+                    "homePage": "curiousLearning"
+                },
+                "objectType": "Agent"
+            },
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/completed",
+                "display": {
+                    "en-US": "completed"
+                }
+            },
+            "object": {
+                "id": "http://data.curiouslearning.org/xAPI/activities/assessment/zulu/readingvocab",
+                "definition": {
+                    "name": {
+                        "en-US": "Zulu Reading Vocabulary"
+                    },
+                    "description": {
+                        "en-US": "Zulu Reading Vocab assessment"
+                    },
+                    "type": "http://data.curiouslearning.org/xAPI/activities/assessment"
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "score": {
+                    "scaled": 100,
+                    "max": 100
+                },
+                "success": true,
+                "completion": true,
+                "duration": "PT10M"
+            }
+        }
+    ]
+}

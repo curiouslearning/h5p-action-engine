@@ -1,0 +1,1314 @@
+{
+    "statements": [
+        {
+            "id": "P3FIn7U8YYO5tPNuA5UMLIGEToVi7spEY/7zWAAySC8=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/survey/english/nonliterate-ses/question/Where do you eat?",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                    "choices": [
+                        {
+                            "id": "option-0",
+                            "description": {
+                                "en-US": "outside"
+                            }
+                        },
+                        {
+                            "id": "option-1",
+                            "description": {
+                                "en-US": "table"
+                            }
+                        },
+                        {
+                            "id": "option-2",
+                            "description": {
+                                "en-US": "floor"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en-US": "Where do you eat?"
+                    },
+                    "interactionType": "choice",
+                    "correctResponsesPattern": []
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "duration": "PT41.67S",
+                "response": "option-1"
+            },
+            "stored": "2022-04-07T15:19:36.444Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/survey/english/nonliterate-ses"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-07T15:19:36.350Z"
+        },
+        {
+            "id": "syvAyPyHHESnfpzc3UJy2rUQDd0faDMOr1z2RwojKbY=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/survey/english/nonliterate-ses/question/Which of these does your family have at home?",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                    "choices": [
+                        {
+                            "id": "option-0",
+                            "description": {
+                                "en-US": "laptop"
+                            }
+                        },
+                        {
+                            "id": "option-1",
+                            "description": {
+                                "en-US": "smartphone"
+                            }
+                        },
+                        {
+                            "id": "option-2",
+                            "description": {
+                                "en-US": "combo"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en-US": "Which of these does your family have at home?"
+                    },
+                    "interactionType": "choice",
+                    "correctResponsesPattern": []
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "duration": "PT3.116S",
+                "response": "option-1"
+            },
+            "stored": "2022-04-07T15:18:48.087Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/survey/english/nonliterate-ses"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-07T15:18:47.988Z"
+        },
+        {
+            "id": "0unLxJ6tFGU7HesRuTTh7brFO7uslsdL3rHkr2tGOts=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/survey/english/nonliterate-ses/question/What does your house look like?",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                    "choices": [
+                        {
+                            "id": "option-0",
+                            "description": {
+                                "en-US": "apartment_building"
+                            }
+                        },
+                        {
+                            "id": "option-1",
+                            "description": {
+                                "en-US": "small_house"
+                            }
+                        },
+                        {
+                            "id": "option-2",
+                            "description": {
+                                "en-US": "tin_hut"
+                            }
+                        },
+                        {
+                            "id": "option-3",
+                            "description": {
+                                "en-US": "wooden_hut"
+                            }
+                        },
+                        {
+                            "id": "option-4",
+                            "description": {
+                                "en-US": "rondoval"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en-US": "What does your house look like?"
+                    },
+                    "interactionType": "choice",
+                    "correctResponsesPattern": []
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "duration": "PT239.248S",
+                "response": "option-3"
+            },
+            "stored": "2022-04-07T15:18:36.642Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/survey/english/nonliterate-ses"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-07T15:18:36.381Z"
+        },
+        {
+            "id": "aEabGYwocuTbQRIljiXopQg1pH8DI07/UJhNz7t/xYw=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/survey/english/nonliterate-ses/question/Where do you get your water?",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                    "choices": [
+                        {
+                            "id": "option-0",
+                            "description": {
+                                "en-US": "truck"
+                            }
+                        },
+                        {
+                            "id": "option-1",
+                            "description": {
+                                "en-US": "pump"
+                            }
+                        },
+                        {
+                            "id": "option-2",
+                            "description": {
+                                "en-US": "water_tap"
+                            }
+                        },
+                        {
+                            "id": "option-3",
+                            "description": {
+                                "en-US": "river"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en-US": "Where do you get your water?"
+                    },
+                    "interactionType": "choice",
+                    "correctResponsesPattern": []
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "duration": "PT13.07S",
+                "response": "option-1"
+            },
+            "stored": "2022-04-07T15:14:22.596Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/survey/english/nonliterate-ses"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-07T15:14:22.480Z"
+        },
+        {
+            "id": "RDXk3Yvdxrwm8dlaEMO0OfmvArdhx5GDoADrDn0jnuk=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/survey/english/nonliterate-ses/question/How does your family get places?",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                    "choices": [
+                        {
+                            "id": "option-0",
+                            "description": {
+                                "en-US": "auto_rickshaw"
+                            }
+                        },
+                        {
+                            "id": "option-1",
+                            "description": {
+                                "en-US": "car"
+                            }
+                        },
+                        {
+                            "id": "option-2",
+                            "description": {
+                                "en-US": "minibus"
+                            }
+                        },
+                        {
+                            "id": "option-3",
+                            "description": {
+                                "en-US": "public_bus"
+                            }
+                        },
+                        {
+                            "id": "option-4",
+                            "description": {
+                                "en-US": "walking"
+                            }
+                        },
+                        {
+                            "id": "option-5",
+                            "description": {
+                                "en-US": "motor-scooter"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en-US": "How does your family get places?"
+                    },
+                    "interactionType": "choice",
+                    "correctResponsesPattern": []
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "duration": "PT10.737S",
+                "response": "option-0"
+            },
+            "stored": "2022-04-07T15:14:01.670Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/survey/english/nonliterate-ses"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-07T15:14:01.551Z"
+        },
+        {
+            "id": "3vJ2eOXPhPuKNUM5dpqzOgt8lCCdypDJ4pKkm5ZEnJk=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/survey/english/nonliterate-ses/question/Where is your food stored?",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                    "choices": [
+                        {
+                            "id": "option-0",
+                            "description": {
+                                "en-US": "basket"
+                            }
+                        },
+                        {
+                            "id": "option-1",
+                            "description": {
+                                "en-US": "refrigerator"
+                            }
+                        },
+                        {
+                            "id": "option-2",
+                            "description": {
+                                "en-US": "tin-containers"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en-US": "Where is your food stored?"
+                    },
+                    "interactionType": "choice",
+                    "correctResponsesPattern": []
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "duration": "PT7.63S",
+                "response": "option-1"
+            },
+            "stored": "2022-04-07T15:13:41.557Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/survey/english/nonliterate-ses"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-07T15:13:41.438Z"
+        },
+        {
+            "id": "+L23OM5ETuCvEIlyG1n3kAgZvigpj8XT6H18hy4CnkE=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/initialized",
+                "display": {
+                    "en-US": "initialized"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/survey/english/nonliterate-ses",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/survey"
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "duration": null,
+                "completion": false
+            },
+            "stored": "2022-04-07T15:13:25.587Z",
+            "timestamp": "2022-04-07T15:13:25.073Z"
+        },
+        {
+            "id": "dgk/cNoV6GigMw0JAMUvJMPL8iiPvm1vdkj2xcwh+nY=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/initialized",
+                "display": {
+                    "en-US": "initialized"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/survey/zulu/non-literate-ses",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/survey"
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "duration": null,
+                "completion": false
+            },
+            "stored": "2022-04-06T18:07:42.270Z",
+            "timestamp": "2022-04-06T18:07:40.101Z"
+        },
+        {
+            "id": "IiZ5oQ32gQPuGg1a0ID6gPXOgvD3NrgMxXWPZ3XfvWk=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/pseudowords/bucket/3/target/akukhuluma",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                    "choices": [
+                        {
+                            "id": "option-0",
+                            "description": {
+                                "en-US": "sesixukwini"
+                            }
+                        },
+                        {
+                            "id": "option-1",
+                            "description": {
+                                "en-US": "ozothathu"
+                            }
+                        },
+                        {
+                            "id": "option-2",
+                            "description": {
+                                "en-US": "akukhuluma"
+                            }
+                        },
+                        {
+                            "id": "option-3",
+                            "description": {
+                                "en-US": "uyagasendlela"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en-US": "akukhuluma"
+                    },
+                    "interactionType": "choice",
+                    "correctResponsesPattern": [
+                        "option-2"
+                    ]
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "score": {
+                    "max": 1,
+                    "min": 0,
+                    "raw": 1,
+                    "scaled": 1
+                },
+                "success": true,
+                "duration": "PT3.394S",
+                "response": "option-2",
+                "completion": true
+            },
+            "stored": "2022-04-06T17:50:41.292Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/pseudowords/bucket/3"
+                        }
+                    ],
+                    "grouping": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/pseudowords"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-06T17:41:08.886Z"
+        },
+        {
+            "id": "7hnJ8N/vAmb2AICC36vi8+7rPx6Rh8KymsaGJv0zsv8=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/initialized",
+                "display": {
+                    "en-US": "initialized"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/pseudowords",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/assessment"
+                },
+                "objectType": "Activity"
+            },
+            "stored": "2022-04-06T17:50:33.249Z",
+            "timestamp": "2022-04-06T17:41:00.901Z"
+        },
+        {
+            "id": "cMasvuVRIiIshrvtJOVoazW4BZjMImxTAs0G5rt302s=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/terminated",
+                "display": {
+                    "en-US": "terminated"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/assessment"
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "score": {
+                    "max": 500,
+                    "min": 0,
+                    "raw": 500,
+                    "scaled": 1
+                },
+                "success": true,
+                "duration": "PT174.942S",
+                "completion": true
+            },
+            "stored": "2022-04-06T17:50:25.329Z",
+            "timestamp": "2022-04-06T17:40:53.045Z"
+        },
+        {
+            "id": "y6PYNkiF7BdsJ+PMZGHL1Ucs+0JQ8Fe2qxXM5fi4DAY=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/terminated",
+                "display": {
+                    "en-US": "terminated"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "9e98fa01-faa1-4e0c-ac59-a6a2a7f4b705",
+                    "homePage": "https://curiousreader.org"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/buckets/5",
+                "definition": {
+                    "type": "https://data.curiouslearning.org/xAPI/activities/assessment/bucket/generic"
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "score": {
+                    "min": 0,
+                    "raw": 4,
+                    "scaled": 4
+                },
+                "success": true,
+                "duration": "PT45.351S",
+                "completion": true
+            },
+            "stored": "2022-04-06T17:50:24.993Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://datacuriouslearning.org/xAPI/activities/assessment/zulu/sightwords"
+                        }
+                    ],
+                    "category": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/bucket/"
+                        },
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/bucket/generic"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-06T17:40:52.954Z"
+        },
+        {
+            "id": "XCd6b7sX0SQn1QJSNetIYVL34PNekC07V9JIAtisfFA=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/bucket/5/target/uMgqibelo",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                    "choices": [
+                        {
+                            "id": "option-0",
+                            "description": {
+                                "en-US": "intothoniyane"
+                            }
+                        },
+                        {
+                            "id": "option-1",
+                            "description": {
+                                "en-US": "umshushuluzo"
+                            }
+                        },
+                        {
+                            "id": "option-2",
+                            "description": {
+                                "en-US": "uMgqibelo"
+                            }
+                        },
+                        {
+                            "id": "option-3",
+                            "description": {
+                                "en-US": "ifasitela"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en-US": "uMgqibelo"
+                    },
+                    "interactionType": "choice",
+                    "correctResponsesPattern": [
+                        "option-2"
+                    ]
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "score": {
+                    "max": 1,
+                    "min": 0,
+                    "raw": 1,
+                    "scaled": 1
+                },
+                "success": true,
+                "duration": "PT1.94S",
+                "response": "option-2",
+                "completion": true
+            },
+            "stored": "2022-04-06T17:50:23.584Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/bucket/5"
+                        }
+                    ],
+                    "grouping": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-06T17:40:49.894Z"
+        },
+        {
+            "id": "SjHGym8vBUleiioHq2OXi8k8QdDzCaCWSaAXEo4LfjU=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/bucket/5/target/intothoniyane",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                    "choices": [
+                        {
+                            "id": "option-0",
+                            "description": {
+                                "en-US": "umshushuluzo"
+                            }
+                        },
+                        {
+                            "id": "option-1",
+                            "description": {
+                                "en-US": "isigqoko"
+                            }
+                        },
+                        {
+                            "id": "option-2",
+                            "description": {
+                                "en-US": "uMgqibelo"
+                            }
+                        },
+                        {
+                            "id": "option-3",
+                            "description": {
+                                "en-US": "intothoniyane"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en-US": "intothoniyane"
+                    },
+                    "interactionType": "choice",
+                    "correctResponsesPattern": [
+                        "option-3"
+                    ]
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "score": {
+                    "max": 1,
+                    "min": 0,
+                    "raw": 1,
+                    "scaled": 1
+                },
+                "success": true,
+                "duration": "PT1.403S",
+                "response": "option-3",
+                "completion": true
+            },
+            "stored": "2022-04-06T17:50:14.941Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/bucket/5"
+                        }
+                    ],
+                    "grouping": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-06T17:40:41.754Z"
+        },
+        {
+            "id": "TqsFGDBOzot1VyC6yT9ZZkoHflHTlhYjFPlR9vaycB0=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/bucket/5/target/ifasitela",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                    "choices": [
+                        {
+                            "id": "option-0",
+                            "description": {
+                                "en-US": "ifasitela"
+                            }
+                        },
+                        {
+                            "id": "option-1",
+                            "description": {
+                                "en-US": "intothoniyane"
+                            }
+                        },
+                        {
+                            "id": "option-2",
+                            "description": {
+                                "en-US": "iphephandaba"
+                            }
+                        },
+                        {
+                            "id": "option-3",
+                            "description": {
+                                "en-US": "uMgqibelo"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en-US": "ifasitela"
+                    },
+                    "interactionType": "choice",
+                    "correctResponsesPattern": [
+                        "option-0"
+                    ]
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "score": {
+                    "max": 1,
+                    "min": 0,
+                    "raw": 1,
+                    "scaled": 1
+                },
+                "success": true,
+                "duration": "PT1.386S",
+                "response": "option-0",
+                "completion": true
+            },
+            "stored": "2022-04-06T17:50:05.189Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/bucket/5"
+                        }
+                    ],
+                    "grouping": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-06T17:40:31.949Z"
+        },
+        {
+            "id": "MyaRV7rWbtEMoG4+Xi+6PU9c67n/ROw1h4/cbuBbOAY=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/bucket/5/target/isibhedlela",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                    "choices": [
+                        {
+                            "id": "option-0",
+                            "description": {
+                                "en-US": "isigqoko"
+                            }
+                        },
+                        {
+                            "id": "option-1",
+                            "description": {
+                                "en-US": "iphephandaba"
+                            }
+                        },
+                        {
+                            "id": "option-2",
+                            "description": {
+                                "en-US": "isibhedlela"
+                            }
+                        },
+                        {
+                            "id": "option-3",
+                            "description": {
+                                "en-US": "mpilonhle"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en-US": "isibhedlela"
+                    },
+                    "interactionType": "choice",
+                    "correctResponsesPattern": [
+                        "option-2"
+                    ]
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "score": {
+                    "max": 1,
+                    "min": 0,
+                    "raw": 1,
+                    "scaled": 1
+                },
+                "success": true,
+                "duration": "PT12.485S",
+                "response": "option-2",
+                "completion": true
+            },
+            "stored": "2022-04-06T17:49:57.026Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/bucket/5"
+                        }
+                    ],
+                    "grouping": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-06T17:40:23.639Z"
+        },
+        {
+            "id": "nAFHJpaa+ih8r7DCxVhzeg/K3pD3FEcjLhM0OaqGvf4=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/terminated",
+                "display": {
+                    "en-US": "terminated"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "9e98fa01-faa1-4e0c-ac59-a6a2a7f4b705",
+                    "homePage": "https://curiousreader.org"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/buckets/4",
+                "definition": {
+                    "type": "https://data.curiouslearning.org/xAPI/activities/assessment/bucket/generic"
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "score": {
+                    "min": 0,
+                    "raw": 4,
+                    "scaled": 4
+                },
+                "success": true,
+                "duration": "PT66.53S",
+                "completion": true
+            },
+            "stored": "2022-04-06T17:49:39.704Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://datacuriouslearning.org/xAPI/activities/assessment/zulu/sightwords"
+                        }
+                    ],
+                    "category": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/bucket/"
+                        },
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/bucket/generic"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-06T17:40:07.558Z"
+        },
+        {
+            "id": "FxfqqI/gFy2n1A4OOI+N+otXzVZITyFtfmiQkJlxu0E=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/bucket/4/target/ingonyama",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                    "choices": [
+                        {
+                            "id": "option-0",
+                            "description": {
+                                "en-US": "impukane"
+                            }
+                        },
+                        {
+                            "id": "option-1",
+                            "description": {
+                                "en-US": "isicabha"
+                            }
+                        },
+                        {
+                            "id": "option-2",
+                            "description": {
+                                "en-US": "impama"
+                            }
+                        },
+                        {
+                            "id": "option-3",
+                            "description": {
+                                "en-US": "ingonyama"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en-US": "ingonyama"
+                    },
+                    "interactionType": "choice",
+                    "correctResponsesPattern": [
+                        "option-3"
+                    ]
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "score": {
+                    "max": 1,
+                    "min": 0,
+                    "raw": 1,
+                    "scaled": 1
+                },
+                "success": true,
+                "duration": "PT5.147S",
+                "response": "option-3",
+                "completion": true
+            },
+            "stored": "2022-04-06T17:49:38.823Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/bucket/4"
+                        }
+                    ],
+                    "grouping": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-06T17:40:04.488Z"
+        },
+        {
+            "id": "qOPQdqlEzV2ZDcxcudm4cx4ge5iHYI3k7OAYgla8Ba0=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/bucket/4/target/ncibilika",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                    "choices": [
+                        {
+                            "id": "option-0",
+                            "description": {
+                                "en-US": "ncibilika"
+                            }
+                        },
+                        {
+                            "id": "option-1",
+                            "description": {
+                                "en-US": "impukane"
+                            }
+                        },
+                        {
+                            "id": "option-2",
+                            "description": {
+                                "en-US": "inkosikazi"
+                            }
+                        },
+                        {
+                            "id": "option-3",
+                            "description": {
+                                "en-US": "ingxube"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en-US": "ncibilika"
+                    },
+                    "interactionType": "choice",
+                    "correctResponsesPattern": [
+                        "option-0"
+                    ]
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "score": {
+                    "max": 1,
+                    "min": 0,
+                    "raw": 1,
+                    "scaled": 1
+                },
+                "success": true,
+                "duration": "PT10.097S",
+                "response": "option-0",
+                "completion": true
+            },
+            "stored": "2022-04-06T17:49:26.880Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/bucket/4"
+                        }
+                    ],
+                    "grouping": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-06T17:39:53.096Z"
+        },
+        {
+            "id": "TsjEqHWULGpmCkEtmtYeI0B/FHWQZJUAwmg/ijmMiNI=",
+            "verb": {
+                "id": "http://adlnet.gov/expapi/verbs/answered",
+                "display": {
+                    "en-US": "answered"
+                }
+            },
+            "actor": {
+                "account": {
+                    "name": "anonymous",
+                    "homePage": "curiouslearning"
+                },
+                "objectType": "Agent"
+            },
+            "object": {
+                "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/bucket/4/target/ingxube",
+                "definition": {
+                    "type": "http://adlnet.gov/expapi/activities/cmi.interaction",
+                    "choices": [
+                        {
+                            "id": "option-0",
+                            "description": {
+                                "en-US": "ingxube"
+                            }
+                        },
+                        {
+                            "id": "option-1",
+                            "description": {
+                                "en-US": "inkosikazi"
+                            }
+                        },
+                        {
+                            "id": "option-2",
+                            "description": {
+                                "en-US": "ncibilika"
+                            }
+                        },
+                        {
+                            "id": "option-3",
+                            "description": {
+                                "en-US": "isicabha"
+                            }
+                        }
+                    ],
+                    "description": {
+                        "en-US": "ingxube"
+                    },
+                    "interactionType": "choice",
+                    "correctResponsesPattern": [
+                        "option-0"
+                    ]
+                },
+                "objectType": "Activity"
+            },
+            "result": {
+                "score": {
+                    "max": 1,
+                    "min": 0,
+                    "raw": 1,
+                    "scaled": 1
+                },
+                "success": true,
+                "duration": "PT4.096S",
+                "response": "option-0",
+                "completion": true
+            },
+            "stored": "2022-04-06T17:49:05.748Z",
+            "context": {
+                "contextActivities": {
+                    "parent": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords/bucket/4"
+                        }
+                    ],
+                    "grouping": [
+                        {
+                            "id": "https://data.curiouslearning.org/xAPI/activities/assessment/zulu/sightwords"
+                        }
+                    ]
+                }
+            },
+            "timestamp": "2022-04-06T17:39:30.684Z"
+        }
+    ],
+    "more": ""
+}

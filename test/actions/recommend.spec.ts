@@ -1,13 +1,11 @@
 import _ from 'lodash';
 import sinon from 'sinon';
 import chai, { expect } from 'chai';
-import * as reqsRaw from '../fixtures/reqObjects/singleReqObject.json';
-import * as multiReqsRaw from '../fixtures/reqObjects/multiReqObject.json';
-import * as apiResponseRaw from '../fixtures/statements/apiResponse.json';
-import * as multiStatementsRaw from '../fixtures/statements/multiReqObjectStatements.json'
-import Recommend from '../../src/actions/action';
+import Recommend, {IRecData, IRecObject} from '../../src/actions/recommend';
 import { IActionObject, IPermissionsObject } from '../../src/models/models';
-import { hasUncaughtExceptionCaptureCallback } from 'process';
+import * as twoCaseRaw from '../fixtures/recData/2-case.json';
+import * as fiveCaseRaw from '../fixtures/recData/5-case.json';
+import * as tenCaseRaw from '../fixtures/recData/10-case.json';
 
 const sandbox = sinon.createSandbox();
 
@@ -33,16 +31,19 @@ const baseParams: IActionObject = {
         name: "testAction",
         reqs: []
     },
-    action: () => {return true;}
 };
 
 describe ('/actions/recommend.ts', () => {
-    let reqs, multiReqs, apiResponse, multiStatements, permissions, params;
+    let
+        permissions,
+        params,
+        twoCase,
+        fiveCase,
+        tenCase;
     beforeEach(() => {
-        reqs = _.cloneDeep(reqsRaw);
-        multiReqs = _.cloneDeep(multiReqsRaw);
-        apiResponse = _.cloneDeep(apiResponseRaw);
-        multiStatements = _.cloneDeep(multiStatementsRaw);
+        twoCase = _.cloneDeep(twoCaseRaw);
+        fiveCase = _.cloneDeep(fiveCaseRaw);
+        tenCase = _.cloneDeep(tenCaseRaw);
         permissions = _.cloneDeep(basePermissions);
         params = _.cloneDeep(baseParams);
         params.action = sandbox.stub().returns(true);
@@ -55,30 +56,73 @@ describe ('/actions/recommend.ts', () => {
     });
 
     it('recommends option 1 of 2', async () => {
-        throw new Error("Test Is Not Implemented");
+        const {recData, statements} = twoCase;
+        const expected = recData.recData[0].value;
+        
+        const callBack = sandbox.stub();
+        const action = new Recommend(recData, callBack, [statements[0]])
+        await action.execute();
+        sinon.assert.calledWith(callBack, expected);
     });
 
     it('recommends option 2 of 2', async () => {
-        throw new Error("Test Is Not Implemented");
-    });
+        const {recData, statements} = twoCase;
+        const expected = recData.recData[1].value;
+        
+        const callBack = sandbox.stub();
+        const action = new Recommend(recData, callBack, statements)
+        await action.execute();
+        sinon.assert.calledWith(callBack, expected);
+   });
 
     it('recommends option 3 of 5', async () => {
-        throw new Error("Test Is Not Implemented");
+        const {recData, statements} = fiveCase;
+        const expected = recData.recData[2].value;
+
+        const callBack = sandbox.stub();
+        const action = new Recommend(recData, callBack, statements);
+        await action.execute();
+        sinon.assert.calledWith(callBack, expected);
     });
 
     it('recommends option 4 of 10', async () => {
-        throw new Error("Test Is Not Implemented");
+        const {recData, statements} = tenCase;
+        const expected = recData.recData[3].value;
+
+        const callBack = sandbox.stub();
+        const action = new Recommend(recData, callBack, statements);
+        await action.execute();
+        sinon.assert.calledWith(callBack, expected);
     });
 
     it('recommends the base case', async () => {
-        throw new Error("Test Is Not Implemented");
+        const {recData} = tenCase;
+        const expected = recData.baseCase.value;
+
+        const callBack = sandbox.stub();
+        const action = new Recommend(recData, callBack, []);
+        await action.execute();
+        sinon.assert.calledWith(callBack, expected);
     });
 
     it('will not execute without permission', async () => {
-        throw new Error("Test Is Not Implemented");
+        const {recData, statements} = tenCase;
+
+        recData.org = "invalidOrg";
+        const callBack = sandbox.stub();
+        const action = new Recommend(recData, callBack, statements);
+        await action.execute();
+        sinon.assert.notCalled(callBack);
+        chai.expect(action.evaluated).to.be.true;
     });
 
     it('throws an exception on improper action data', async () => {
-        throw new Error("Test Is Not Implemented");
+        try {
+            const callBack = () => {};
+            const action = new Recommend({}, callBack, [], false);
+            throw new Error("Expected constructor to throw error!")
+        } catch(e) {
+            chai.expect(e.message).to.equal("param 'data' must implement the IRecObject interface")
+        }
     });
 })

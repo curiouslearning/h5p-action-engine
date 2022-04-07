@@ -6,8 +6,8 @@ import IStatement from "../models/xAPI/statement";
 function isIActionObject(val: any): val is IActionObject {
     if (!val.org || typeof val.org !== 'string') return false;
     if (!val.agent || !isIAgent(val.agent)) return false;
-    if(!val.orgList || !val.orgList.name || !val.orgList.permissions) return false;
-    if(!val.prereqs || !val.prereqs.name || !val.prereqs.reqs || Array.isArray(val.prereqs.reqs)) return false;
+    if(!val.orgList ) return false;
+    if(!val.prereqs ) return false;
     return true;
 }
 
@@ -24,13 +24,14 @@ export default class Action {
 
     constructor (
         data: IActionObject,
+        action: ()=> void,
         statements: IStatement[] = [],
         fetchData = false
     ) {
         if(!isIActionObject(data)) {
-            throw new Error("param 'data' must implement the IActionObject interface")
+            throw new Error("param 'data' must implement the base IActionObject interface")
         }
-        this.action = data.action;
+        this.action = action;
         this.org = data.org;
         this.agent = data.agent;
         this.orgList = data.orgList;

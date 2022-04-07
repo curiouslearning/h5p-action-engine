@@ -31,9 +31,9 @@ const baseParams: IActionObject = {
     prereqs: {
         name: "testAction",
         reqs: []
-    },
-    action: () => {return true;}
+    }
 };
+const callback = () => {return true;};
 
 describe('/actions/action.ts', () => {
     let reqs, multiReqs, apiResponse, multiStatements, permissions, params;
@@ -54,21 +54,21 @@ describe('/actions/action.ts', () => {
     });
 
     it('executes when it has permission and no prereqs', async () => {
-        const action = new Action(params);
+        const action = new Action(params, callback);
         const test = await action.execute();
         chai.expect(test).to.be.true;
     });
 
     it('executes when data and preReqs match', async () => {
         params.prereqs.reqs = multiReqs.values;
-        const action = new Action(params, multiStatements.values, false);
+        const action = new Action(params, callback, multiStatements.values, false);
         const test = await action.execute();
         chai.expect(test).to.be.true;
     });
 
     it('will not execute without permission', async () => {
         params.org = 'invalidOrg';
-        const action = new Action(params);
+        const action = new Action(params, callback);
         const test = await action.execute();
         chai.expect(test).to.be.false;
     }); 
@@ -76,7 +76,7 @@ describe('/actions/action.ts', () => {
     it('will not execute if prereqs are not met', async () => {
         reqs.values[0].result.score.scaled.operator = "LTE"
         params.prereqs.reqs = reqs.values;
-        const action = new Action(params, [apiResponse.statements[0]], false);
+        const action = new Action(params, callback, [apiResponse.statements[0]], false);
         const test = await action.execute();
         chai.expect(test).to.be.false;
     });
@@ -84,21 +84,21 @@ describe('/actions/action.ts', () => {
     it('will not execute on both failed conditions', async () => {
         params.preReqs = multiReqs.values;
         params.org = "invalidOrg";
-        const action = new Action(params, [], false);
+        const action = new Action(params, callback, [], false);
         const test = await action.execute();
         chai.expect(test).to.be.false;
     });
 
     it('will throw an error on improperly formatted data', async () => {
         const badParams = {
-            org: NaN,
-            ...params
+            ...params,
+            org: NaN
         };
         try {
-           const action = new Action(badParams); 
+           const action = new Action(badParams, callback); 
            throw new Error("constructor did not throw!");
         } catch (e) {
-           chai.expect(e.message).to.equal("param 'data' must implement the IActionObject interface") 
+           chai.expect(e.message).to.equal("param 'data' must implement the base IActionObject interface") 
         }
     });
 })
