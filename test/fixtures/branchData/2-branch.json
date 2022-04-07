@@ -1,6 +1,6 @@
 {
-    "recData": {
-        "name": "2-case test",
+    "branchData": {
+        "name": "2-branch test",
         "agent": {
             "account": {
                 "name": "testAgent",
@@ -9,19 +9,19 @@
         },
         "org": "testOrg1",
         "orgList": {
-            "name": "2-case permissions", 
+            "name": "2-branch permissions", 
             "permissions": ["testOrg1", "curiousLearning"]
         },
         "prereqs": {
             "name": "basePreReqs",
             "reqs": []
         },
-        "recData": [
+        "branchData": [
             {
-                "name": "firstCase",
+                "name": "firstBranch",
                 "index": 1,
                 "preReqs": {
-                    "name": "firstCase",
+                    "name": "firstBranch",
                     "reqs": [
                         {
                             "verb": {
@@ -59,10 +59,10 @@
                 "value": "https://curiousreader.org/en/assessment/letter-sound-english"
             },
             {
-                "name": "secondCase",
+                "name": "secondBranch",
                 "index": 2,
                 "preReqs": {
-                    "name": "firstCase",
+                    "name": "firstBranch",
                     "reqs": [
                         {
                             "verb": {
@@ -99,11 +99,11 @@
                 "value": "https://curiousreader.org/en/assessment/sight-words-english"
             }
         ],
-        "baseCase": {
-            "name": "baseCase",
+        "baseBranch": {
+            "name": "baseBranch",
             "index": 0,
             "preReqs": {
-                "name": "baseCase",
+                "name": "baseBranch",
                 "reqs": []
             },
             "value": "https://curiousreader.org/"

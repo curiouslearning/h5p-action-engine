@@ -1,6 +1,6 @@
 {
-    "recData": {
-        "name": "10-case test",
+    "branchData": {
+        "name": "10-branch test",
         "agent": {
             "account": {
                 "name": "testAgent",
@@ -9,19 +9,19 @@
         },
         "org": "testOrg1",
         "orgList": {
-            "name": "10-case permissions", 
+            "name": "10-branch permissions", 
             "permissions": ["testOrg1", "curiousLearning"]
         },
         "prereqs": {
             "name": "basePreReqs",
             "reqs": []
         },
-        "recData": [           
+        "branchData": [           
             {
-                "name": "firstCase",
+                "name": "firstBranch",
                 "index": 1,
                 "preReqs": {
-                    "name": "firstCaseReqs",
+                    "name": "firstBranchReqs",
                     "reqs": [{
                         "verb": {
                             "id": {
@@ -46,10 +46,10 @@
                 "value": "http://curiousreader.org/en/book/level1/reading1"
             },
             {
-                "name": "secondCase",
+                "name": "secondBranch",
                 "index": 2,
                 "preReqs": {
-                    "name": "secondCaseReqs",
+                    "name": "secondBranchReqs",
                     "reqs": [{
                         "verb": {
                             "id": {
@@ -94,10 +94,10 @@
                 "value": "http://curiousreader.org/en/book/level1/reading3"
             },
             {
-                "name": "thirdCase",
+                "name": "thirdBranch",
                 "index": 3,
                 "preReqs": {
-                    "name": "thirdCaseReqs",
+                    "name": "thirdBranchReqs",
                     "reqs": [{
                         "verb": {
                             "id": {
@@ -160,10 +160,10 @@
                 "value": "http://curiousreader.org/en/book/level1/reading4"
             },
             {
-                "name": "fourthCase",
+                "name": "fourthBranch",
                 "index": 4,
                 "preReqs": {
-                    "name": "fourthCaseReqs",
+                    "name": "fourthBranchReqs",
                     "reqs": [
                         {
                             "verb": {
@@ -247,10 +247,10 @@
                 "value": "http://curiousreader.org/en/book/level1/reading5"
             },
             {
-                "name": "fifthCase",
+                "name": "fifthBranch",
                 "index": 1,
                 "preReqs": {
-                    "name": "fifthCaseReqs",
+                    "name": "fifthBranchReqs",
                     "reqs": [{
                         "verb": {
                             "id": {
@@ -351,10 +351,10 @@
                 },
                 "value": "http://curiousreader.org/en/book/level2/reading7"
             }, {
-                "name": "seventhCase",
+                "name": "seventhBranch",
                 "index": 7,
                 "preReqs": {
-                    "name": "seventhCaseReqs",
+                    "name": "seventhBranchReqs",
                     "reqs": [
                         {
                             "verb": {
@@ -476,10 +476,10 @@
                 },
                 "value": "http://curiousreader.org/en/book/level2/reading8"
             }, {
-                "name": "eigthCase",
+                "name": "eigthBranch",
                 "index": 8,
                 "preReqs": {
-                    "name": "eighthCaseReqs",
+                    "name": "eighthBranchReqs",
                     "reqs": [
                         {
                             "verb": {
@@ -621,10 +621,10 @@
                 },
                 "value": "http://curiousreader.org/en/book/level2/reading9"
             }, {
-                "name": "ninthCase",
+                "name": "ninthBranch",
                 "index": 9,
                 "preReqs": {
-                    "name": "ninthCaseReqs",
+                    "name": "ninthBranchReqs",
                     "reqs": [
                         {
                             "verb": {
@@ -783,10 +783,10 @@
                 },
                 "value": "http://curiousreader.org/en/book/level2/reading10"
             }, {
-                "name": "tenthCase",
+                "name": "tenthBranch",
                 "index": 10,
                 "preReqs": {
-                    "name": "tenthCaseReqs",
+                    "name": "tenthBranchReqs",
                     "reqs": [
                         {
                             "verb": {
@@ -966,11 +966,11 @@
                 "value": "http://curiousreader.org/en/book/congratulations"
             }
         ],
-        "baseCase": {
-            "name": "baseCase",
+        "baseBranch": {
+            "name": "baseBranch",
             "index": 0,
             "preReqs": {
-                "name": "baseCase",
+                "name": "baseBranch",
                 "reqs": []
             },
             "value": "https://curiousreader.org/"

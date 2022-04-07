@@ -1,47 +1,45 @@
-import { resolve } from "path";
 import Evaluator from "../helpers/evaluator";
 import { IActionObject, PreRequisitesObject } from "../models/models";
 import IStatement from '../models/xAPI/statement';
-import IStatementReqObject from "../models/xAPI/statementReqObject";
 import Action from "./action";
 
-export interface IRecObject extends IActionObject {
+export interface IBranchObject extends IActionObject {
     name: string;
-    recData: IRecData[];
-    baseCase: IRecData;
+    branchData: IBranchData[];
+    baseBranch: IBranchData;
 }
 
-export interface IRecData {
+export interface IBranchData {
     name: string;
     index: number;
     preReqs: PreRequisitesObject;
     value: string;
 }
 
-function isIRecObject(val: any): val is IRecObject {
+function isIBranchObject(val: any): val is IBranchObject {
     if (!val.name) return false;
-    if (!val.recData) return false;
-    if (!val.baseCase) return false;
+    if (!val.branchData) return false;
+    if (!val.baseBranch) return false;
     return true;
 }
 
-export default class Recommend extends Action {
-    recommendation: (data: string) => void;
-    cases: IRecData[];
-    baseCase: IRecData;
+export default class BranchingAction extends Action {
+    callback: (data: string) => void;
+    cases: IBranchData[];
+    baseBranch: IBranchData;
     constructor(
-        data: IRecObject,
-        rec: (data: string) => void,
+        data: IBranchObject,
+        callback: (data: string) => void,
         statements: IStatement[],
         fetchData = false
         ) {
-            if(!isIRecObject(data)) {
-                throw new Error("param 'data' must implement the IRecObject interface");
+            if(!isIBranchObject(data)) {
+                throw new Error("param 'data' must implement the IBranchObject interface");
             }
-            super(data, ()=> {rec(data.baseCase.value)}, statements, fetchData); 
-            this.cases = data.recData;
-            this.baseCase = data.baseCase;
-            this.recommendation = rec
+            super(data, ()=> {callback(data.baseBranch.value)}, statements, fetchData); 
+            this.cases = data.branchData;
+            this.baseBranch = data.baseBranch;
+            this.callback = callback
     }
 
     public async execute(): Promise<boolean> {
@@ -58,33 +56,33 @@ export default class Recommend extends Action {
         }
 
         if(this.canExecute) {
-            const recData = await this.calculateRecCase();
-            this.recommendation(recData.value);
+            const branchData = await this.pickBranch();
+            this.callback(branchData.value);
             return true;
         }
         return false;
     }
 
-    public async calculateRecCase(): Promise<IRecData> {
+    public async pickBranch(): Promise<IBranchData> {
 
-        const results = this.cases.map(async recCase => {
+        const results = this.cases.map(async branch => {
             const evaluator = new Evaluator(this.agent,
-            recCase.preReqs,
+            branch.preReqs,
             this.fetchData,
             this.data
             )
             const pass = await evaluator.eval();
-            if(pass) return recCase.index;
+            if(pass) return branch.index;
             return -1;
         });
-        const caseIndex = await Promise.all(results).then((vals) => {
+        const branchIndex = await Promise.all(results).then((vals) => {
             return Math.max(...vals);
         })
-        const rec = this.cases.find(recCase => recCase.index === caseIndex);
-        if(!rec) {
-            return this.baseCase;
+        const callback = this.cases.find(branch => branch.index === branchIndex);
+        if(!callback) {
+            return this.baseBranch;
         }
-        return rec;
+        return callback;
     }
 
     public async evaluate(): Promise<boolean> {
